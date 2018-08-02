@@ -17,11 +17,11 @@ def check_cycles(file_name):
         nb_tokens += len(arcs_sent)
         arcs_sent = np.hstack([0] + arcs_sent)
         graph = Tarjan(arcs_sent, np.arange(1, len(arcs_sent))) 
-	cycles = graph._SCCs
-	iscycle = False
-	for cycle in cycles:
-	    if len(cycle) > 1:
-		iscycle = True
+        cycles = graph._SCCs
+        iscycle = False
+        for cycle in cycles:
+            if len(cycle) > 1:
+                iscycle = True
                 nb_cycles += 1
         if iscycle:
             cycle_sents.append(sent_idx)

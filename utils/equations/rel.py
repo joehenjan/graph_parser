@@ -3,9 +3,9 @@ import tensorflow as tf
 def get_rel_weights(name, units, nb_rels): # no dropout
     weights = {}
     with tf.variable_scope(name) as scope:
-	weights['U-rel'] = tf.get_variable('U-rel', [units, nb_rels, units])
-	weights['W-rel'] = tf.get_variable('W-rel', [units, nb_rels])
-	weights['b-rel'] = tf.get_variable('b-rel', [nb_rels])
+        weights['U-rel'] = tf.get_variable('U-rel', [units, nb_rels, units])
+        weights['W-rel'] = tf.get_variable('W-rel', [units, nb_rels])
+        weights['b-rel'] = tf.get_variable('b-rel', [nb_rels])
     return weights
 
 ## rel_equation is fairly complicated, so let's use this shorthand

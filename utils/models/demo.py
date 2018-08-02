@@ -18,7 +18,7 @@ class Demo_Parser(Parsing_Model_Joint_Both):
         ## build a model
         self.loader = Demo_Dataset(base_dir, self.opts.embedding_dim)
         #self.batch_size = 100
-	#self.get_features()
+        #self.get_features()
         self.features = ['words', 'chars']
         self.add_placeholders()
         self.inputs_dim = self.opts.embedding_dim + self.opts.jk_dim + self.opts.stag_dim + self.opts.nb_filters

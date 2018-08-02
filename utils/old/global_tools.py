@@ -2,7 +2,7 @@ import tensorflow as tf
 def get_global_weights(name, units, nb_rels): # no dropout weights = {}
     weights = {}
     with tf.variable_scope(name) as scope:
-	weights['W-global'] = tf.get_variable('W-global', [nb_rels, units]) 
+        weights['W-global'] = tf.get_variable('W-global', [nb_rels, units]) 
     return weights
 
 def global_equation(vectors,  arc_weights, rel_weights, global_weights): 

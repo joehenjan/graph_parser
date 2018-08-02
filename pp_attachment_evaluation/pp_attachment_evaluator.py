@@ -11,8 +11,8 @@ testTags = open("predicted_stag/test.txt", "r")
 treeProps = open("d6.treeproperties", "r")
 treeDict = {}
 for line in treeProps:
-	parts = line.split()
-	treeDict[parts[0]] = parts[1:]
+        parts = line.split()
+        treeDict[parts[0]] = parts[1:]
 
 # Creates a list of all the test sentences, plus the other info about
 # each sentence
